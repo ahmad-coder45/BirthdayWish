@@ -51,6 +51,47 @@ h1 .l{display:inline-block;opacity:0;filter:blur(14px);transform:translateY(40px
 .lantern em{position:absolute;top:60px;font-size:.8rem;color:var(--gold);white-space:nowrap;text-shadow:0 0 8px #000}
 @keyframes float{0%{transform:translate(0,0) rotate(-3deg);opacity:0}8%{opacity:1}50%{transform:translate(var(--s),-55vh) rotate(3deg)}100%{transform:translate(calc(var(--s)*-.6),-125vh) rotate(-3deg);opacity:.9}}
 @keyframes flick{to{filter:brightness(1.25);transform:scale(1.04)}}
+
+/* Responsive layout: phones and compact tablets */
+.reveal{width:100%;max-width:48rem}
+.dua{width:min(100%,30rem)}
+#name{max-width:100%;overflow-wrap:anywhere}
+.date,.hint,.sign{max-width:100%;padding-inline:4px}
+@media (max-width:600px){
+  main{min-height:100svh;padding:clamp(24px,6vh,42px) 16px calc(30px + env(safe-area-inset-bottom,0px));gap:16px}
+  #seal{width:clamp(112px,34vw,140px);height:clamp(112px,34vw,140px)}
+  #seal span{bottom:-32px;font-size:clamp(.88rem,3.8vw,1rem)}
+  .reveal{gap:clamp(12px,3.5vw,17px)}
+  .moon{width:44px;height:44px}
+  .hb{font-size:clamp(1.25rem,5vw,1.7rem)}
+  h1{font-size:clamp(2.15rem,10.5vw,4rem);line-height:1.06;letter-spacing:-.035em}
+  .date{font-size:clamp(.82rem,3.5vw,.96rem);line-height:1.45}
+  .dua{padding:22px 17px 19px;border-radius:34% 34% 16px 16px/13% 13% 16px 16px}
+  .ar{font-size:clamp(1.28rem,5.8vw,1.7rem);line-height:1.85;overflow-wrap:anywhere}
+  .en{font-size:clamp(.93rem,3.8vw,1.02rem);line-height:1.6}
+  #ameen{min-height:44px;padding:11px 28px;font-size:1rem}
+  .sign{font-size:1.12rem;line-height:1.45}
+  .sign small{font-size:.88rem}
+  .hint{font-size:.82rem;line-height:1.5}
+  .lantern{transform-origin:center}
+}
+@media (max-width:360px){
+  main{padding-left:12px;padding-right:12px}
+  h1{font-size:clamp(2rem,10vw,2.35rem)}
+  .dua{padding:19px 14px 17px}
+  .ar{font-size:1.22rem}
+  .en{font-size:.91rem}
+}
+@media (max-height:700px) and (max-width:900px){
+  main{justify-content:flex-start}
+}
+@media (orientation:landscape) and (max-height:500px){
+  main{padding-top:20px;padding-bottom:24px}
+  .reveal{gap:10px}
+  .moon{width:34px;height:34px}
+  .dua{padding:15px 18px}
+}
+
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important}}
 </style>
 </head>
