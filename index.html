@@ -58,6 +58,10 @@ h1 .l{display:inline-block;opacity:0;filter:blur(14px);transform:translateY(40px
 #name{max-width:100%;overflow-wrap:anywhere}
 .date,.hint,.sign{max-width:100%;padding-inline:4px}
 @media (max-width:600px){
+  /* Keep the rotating mandala centered behind the birthday content on phones */
+  svg.mandala{top:36%;width:min(112vw,560px);opacity:0}
+  .open svg.mandala{opacity:.24}
+
   main{min-height:100svh;padding:clamp(24px,6vh,42px) 16px calc(30px + env(safe-area-inset-bottom,0px));gap:16px}
   #seal{width:clamp(112px,34vw,140px);height:clamp(112px,34vw,140px)}
   #seal span{bottom:-32px;font-size:clamp(.88rem,3.8vw,1rem)}
